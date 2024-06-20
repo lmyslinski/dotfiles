@@ -1,0 +1,21 @@
+import = [
+  # uncomment the flavour you want below:
+  #"~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+   "~/.config/alacritty/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin-mocha.toml"
+]
+  
+[font.normal]
+family = "SauceCodeProNerdFont"
+style = "Regular"
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+opacity = 0.95
+startup_mode = "Maximized"
+padding = { x = 3, y = 3 }
+dynamic_padding = true
+decorations = "None"
