@@ -7,7 +7,7 @@ import = [
 ]
   
 [font.normal]
-family = "SauceCodeProNerdFont"
+family = "SauceCodePro"
 style = "Regular"
 
 [env]
