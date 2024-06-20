@@ -1,4 +1,4 @@
-source /usr/share/zsh-antigen/antigen.zsh 
+source ~/.config/zsh/antigen.zsh 
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -31,11 +31,9 @@ export EDITOR='nvim'
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export VOLTA_HOME="$HOME/.volta"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$PATH:/opt/nvim/"
 export PATH="/home/lmyslinski/go/bin:$PATH"
-
 export PATH="/home/lmyslinski/.cargo/bin:$PATH"
 
 # pnpm
