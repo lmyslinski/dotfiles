@@ -5,10 +5,13 @@ import = [
    "~/.config/alacritty/catppuccin-macchiato.toml"
   # "~/.config/alacritty/catppuccin-mocha.toml"
 ]
-  
+[font]
+size = 15
+
 [font.normal]
-family = "SauceCodePro"
+family = "SauceCodePro Nerd Font"
 style = "Regular"
+
 
 [env]
 TERM = "xterm-256color"
@@ -18,4 +21,10 @@ opacity = 0.95
 startup_mode = "Maximized"
 padding = { x = 3, y = 3 }
 dynamic_padding = true
-decorations = "None"
+decorations = "Buttonless"
+
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+]
