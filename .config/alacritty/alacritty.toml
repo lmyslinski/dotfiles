@@ -9,7 +9,8 @@ import = [
 size = 15
 
 [font.normal]
-family = "SauceCodePro Nerd Font"
+#family = "SauceCodePro Nerd Font"
+family = "SauceCodeProNerdFont"
 style = "Regular"
 
 
