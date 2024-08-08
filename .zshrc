@@ -32,7 +32,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="$PATH:/opt/nvim/"
+export PATH="$PATH:/opt/nvim/bin"
 export PATH="/home/lmyslinski/go/bin:$PATH"
 export PATH="/home/lmyslinski/.cargo/bin:$PATH"
 
