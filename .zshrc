@@ -36,6 +36,9 @@ export PATH="$PATH:/opt/nvim/bin"
 export PATH="/home/lmyslinski/go/bin:$PATH"
 export PATH="/home/lmyslinski/.cargo/bin:$PATH"
 
+  export FLYCTL_INSTALL="/home/lmyslinski/.fly"
+  export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 # pnpm
 export PNPM_HOME="/home/lmyslinski/.local/share/pnpm"
 case ":$PATH:" in
@@ -44,3 +47,10 @@ case ":$PATH:" in
 esac
 # pnpm end
 eval "$(starship init zsh)"
+
+# fnm
+FNM_PATH="/home/lmyslinski/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/lmyslinski/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
