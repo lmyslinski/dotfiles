@@ -23,5 +23,6 @@ if [ -x "$(command -v conda)" ]; then
   unset __conda_setup
 fi
 
+
 # Starship
 eval "$(starship init zsh)"
