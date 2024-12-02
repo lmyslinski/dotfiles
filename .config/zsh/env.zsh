@@ -4,7 +4,7 @@
 # fnm
 FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  eval "$(fnm env)"
+  eval "$($FNM_PATH/fnm env)"
 fi
 
 # Deno
