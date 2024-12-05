@@ -7,3 +7,16 @@ export PATH="$HOME/.cache/lm-studio/bin:$PATH"
 export PATH="$HOME/.sdkman/bin:$PATH"
 export PATH="$HOME/.volta/bin:$PATH"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# golang
+GOLANG_PATH="/usr/local/go/bin"
+if [ -d "$GOLANG_PATH" ]; then
+  export PATH="$PATH:$GOLANG_PATH"
+fi
+
+# nvim
+
+NVIM_PATH="/opt/nvim-linux64/bin"
+if [ -d "$NVIM_PATH" ]; then
+  export PATH="$PATH:$NVIM_PATH"
+fi
