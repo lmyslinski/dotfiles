@@ -6,6 +6,8 @@ export PATH="$HOME/.local/share/fnm:$PATH"
 export PATH="$HOME/.cache/lm-studio/bin:$PATH"
 export PATH="$HOME/.sdkman/bin:$PATH"
 export PATH="$HOME/.volta/bin:$PATH"
+export PATH="$HOME/miniconda3/bin:$PATH"
+export PATH="$HOME/Dev/cv2b/cv2b/scripts:$PATH"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # golang
