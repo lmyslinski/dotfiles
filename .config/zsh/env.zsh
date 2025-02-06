@@ -24,6 +24,9 @@ if [ -x "$(command -v conda)" ]; then
   unset __conda_setup
 fi
 
+if [[ $(uname -r) == *Microsoft* ]]; then
+  export BROWSER=wslview
+fi
 
 # Starship
 eval "$(starship init zsh)"

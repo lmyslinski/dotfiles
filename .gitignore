@@ -1,2 +1,5 @@
 .aider*
 .env
+.config/nextjs-nodejs
+# news.md keeps making changes
+.config/nvim/lazyvim.json

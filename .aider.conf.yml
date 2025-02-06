@@ -18,7 +18,8 @@
 # Main model:
 
 ## Specify the model to use for the main chat
-model: openrouter/mistralai/mistral-small-24b-instruct-2501
+# model: openrouter/mistralai/mistral-small-24b-instruct-2501
+model: gemini/gemini-2.0-flash-exp
 
 ## Use claude-3-opus-20240229 model for the main chat
 #opus: false
@@ -388,7 +389,7 @@ test: false
 #  - zzz
 
 ## specify a read-only file (can be used multiple times)
-read: ['README.md', 'CONVENSIONS.md', 'src/components/ui']
+read: ['README.md', 'CONVENSIONS.md']
 ## Specify multiple values like this:
 #read:
 #  - xxx
@@ -420,7 +421,7 @@ read: ['README.md', 'CONVENSIONS.md', 'src/components/ui']
 #config: xxx
 
 ## Specify the .env file to load (default: .env in git root)
-#env-file: .env
+env-file: ~/.env
 
 ## Enable/disable suggesting shell commands (default: True)
 #suggest-shell-commands: true
