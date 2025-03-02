@@ -24,6 +24,10 @@ if [ -x "$(command -v conda)" ]; then
   unset __conda_setup
 fi
 
+if [ -d "/home/linuxbrew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 if [[ $(uname -r) == *Microsoft* ]]; then
   export BROWSER=wslview
 fi
