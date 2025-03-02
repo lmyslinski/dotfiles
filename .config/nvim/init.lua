@@ -32,3 +32,7 @@ local plugins = {
 local opts = {}
 
 require("lazy").setup(plugins, opts)
+require("catppuccin").setup()
+vim.cmd.colorscheme("catppuccin")
+
+
