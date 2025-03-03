@@ -21,8 +21,6 @@
 # model: openrouter/mistralai/mistral-small-24b-instruct-2501
 model: azure/o1-mini
 
-# model: gemini/gemini-2.0-flash-exp
-
 ## Use claude-3-opus-20240229 model for the main chat
 #opus: false
 
