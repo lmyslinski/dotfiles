@@ -28,5 +28,8 @@ if [[ $(uname -r) == *Microsoft* ]]; then
   export BROWSER=wslview
 fi
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # Starship
 eval "$(starship init zsh)"
