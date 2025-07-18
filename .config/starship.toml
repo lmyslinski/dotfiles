@@ -7,7 +7,7 @@ $git_state\
 $git_status\
 $git_metrics\
 $fill\
-$nodejs\
+$bun\
 $conda\
 $python\
 $cmd_duration $jobs $time\
@@ -16,7 +16,7 @@ $character"""
 
 add_newline = true
 
-[nodejs]
+[bun]
 format = "[$symbol($version )]($style)"
 
 [fill]
