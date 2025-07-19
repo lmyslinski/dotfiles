@@ -16,9 +16,16 @@ if [ -d "$GOLANG_PATH" ]; then
   export PATH="$PATH:$GOLANG_PATH"
 fi
 
-# nvim
-
-NVIM_PATH="/opt/nvim-linux64/bin"
-if [ -d "$NVIM_PATH" ]; then
-  export PATH="$PATH:$NVIM_PATH"
+# fnm
+FNM_PATH="/home/lmyslinski/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/lmyslinski/.local/share/fnm:$PATH"
+  eval "`fnm env`"
 fi
+
+# bun completions
+[ -s "/home/lmyslinski/.bun/_bun" ] && source "/home/lmyslinski/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

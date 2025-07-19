@@ -1,5 +1,9 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+vim.opt.relativenumber = true
+-- vim.g.root_spec = { "cwd" }
+vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
+vim.lsp.enable("biome")
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
