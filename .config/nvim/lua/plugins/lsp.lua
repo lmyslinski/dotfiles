@@ -10,6 +10,8 @@ return {
                 includeCompletionsForModuleExports = true,
                 includeCompletionsForImportStatements = true,
                 importModuleSpecifier = "non-relative",
+                organizeImports = false,
+                format = false,
               },
             },
           },

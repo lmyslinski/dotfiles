@@ -2,7 +2,7 @@
 source ~/.config/zsh/antigen/antigen.zsh 
 
 # Use Oh My Zsh
-# antigen use oh-my-zsh
+antigen use oh-my-zsh
 
 # Load bundles
 antigen bundle git
