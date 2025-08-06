@@ -23,6 +23,8 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # bun completions
 [ -s "/home/lmyslinski/.bun/_bun" ] && source "/home/lmyslinski/.bun/_bun"
 
