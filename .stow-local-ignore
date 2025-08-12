@@ -1,3 +1,6 @@
 readme.md
 .config/tmux/plugins
 .git
+.config/alacritty-macos
+.config/alacritty-linux
+setup-stow.sh
