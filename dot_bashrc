@@ -7,5 +7,9 @@ source ~/.local/share/omarchy/default/bash/rc
 # Make an alias for invoking commands you use constantly
 # alias p='python'
 alias dc='docker compose'
+alias lg='lazygit'
+alias gst='git status'
+alias gaa='git add -A'
+alias gcmsg='git commit -m'
 
 . "$HOME/.local/share/../bin/env"
