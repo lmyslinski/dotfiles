@@ -1,0 +1,37 @@
+[Unit]
+Description=Rclone Mount for gdrive-mlnative
+# Wait until the network is ready
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# ExecStart runs the rclone mount command.
+ExecStart=/usr/bin/rclone mount \
+    gdrive-mlnative: \
+    %h/Documents/gdrive-mlnative/ \
+    --config=%h/.config/rclone/rclone.conf \
+    --allow-other \
+    --poll-interval 15s \
+    --dir-cache-time 72h \
+    --vfs-cache-mode full \
+    --vfs-cache-max-size 100G \
+    --vfs-cache-max-age 7d \
+    --timeout 5m \
+    --retries 3 \
+    --low-level-retries 10 \
+    --stats 1m \
+    --log-file=/tmp/rclone-mlnative.log \
+    --log-level INFO
+
+# ExecStop command to safely unmount the drive
+ExecStop=/bin/fusermount -u %h/Documents/gdrive-mlnative/
+
+# Ensure the service stops gracefully
+KillMode=none
+Type=notify
+Restart=on-failure
+RestartSec=5
+
+[Install]
+# Start the service when the user session is fully ready
+WantedBy=default.target

@@ -1,0 +1,38 @@
+[Unit]
+Description=Rclone Mount for gdrive-office
+# Wait until the network is ready
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# ExecStart runs the rclone mount command.
+# The full path to rclone is used for reliability.
+ExecStart=/usr/bin/rclone mount \
+    gdrive-office: \
+    %h/Documents/gdrive-office/ \
+    --config=%h/.config/rclone/rclone.conf \
+    --allow-other \
+    --poll-interval 15s \
+    --dir-cache-time 72h \
+    --vfs-cache-mode full \
+    --vfs-cache-max-size 50G \
+    --vfs-cache-max-age 7d \
+    --timeout 5m \
+    --retries 3 \
+    --low-level-retries 10 \
+    --stats 1m \
+    --log-file=/tmp/rclone-office.log \
+    --log-level INFO
+
+# ExecStop command to safely unmount the drive
+ExecStop=/bin/fusermount -u %h/Documents/gdrive-office/
+
+# Ensure the service stops gracefully
+KillMode=none
+Type=notify
+Restart=on-failure
+RestartSec=5
+
+[Install]
+# Start the service when the user session is fully ready
+WantedBy=default.target
