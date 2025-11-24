@@ -13,3 +13,6 @@ alias gaa='git add -A'
 alias gcmsg='git commit -m'
 
 . "$HOME/.local/share/../bin/env"
+
+# Added by Hugging Face CLI installer
+export PATH="/home/lmyslinski/.local/bin:$PATH"
