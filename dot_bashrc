@@ -13,7 +13,7 @@ alias gaa='git add -A'
 alias gcmsg='git commit -m'
 
 export PATH="/home/lmyslinski/.local/bin:$PATH"
-export PATH=/home/lmyslinski/.opencode/bin:$PATH
+export PATH="/home/lmyslinski/.opencode/bin:$PATH"
 
 . "$HOME/.local/share/../bin/env"
 
