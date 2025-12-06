@@ -12,7 +12,8 @@ alias gst='git status'
 alias gaa='git add -A'
 alias gcmsg='git commit -m'
 
+export PATH="/home/lmyslinski/.local/bin:$PATH"
+export PATH=/home/lmyslinski/.opencode/bin:$PATH
+
 . "$HOME/.local/share/../bin/env"
 
-# Added by Hugging Face CLI installer
-export PATH="/home/lmyslinski/.local/bin:$PATH"
