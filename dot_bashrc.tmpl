@@ -1,6 +1,11 @@
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
+
+{{ if eq .chezmoi.os "darwin" }}
+# darwin
+{{ else if eq .chezmoi.os "linux" }}
 source ~/.local/share/omarchy/default/bash/rc
+{{ end }}
 
 # Add your own exports, aliases, and functions here.
 #

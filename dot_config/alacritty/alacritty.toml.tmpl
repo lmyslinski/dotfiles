@@ -1,7 +1,16 @@
-general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
+{{ if eq .chezmoi.os "darwin" }}
 
-[env]
-TERM = "xterm-256color"
+general.import = [ "~/.config/alacritty/everforest.toml" ]
+
+[font]
+normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+bold = { family = "FiraCode Nerd Font Mono", style = "Bold" }
+italic = { family = "FiraCode Nerd Font Mono", style = "Italic" }
+size = 11
+
+{{ else if eq .chezmoi.os "linux" }}
+
+general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono" }
@@ -9,8 +18,22 @@ bold = { family = "JetBrainsMono Nerd Font Mono" }
 italic = { family = "JetBrainsMono Nerd Font Mono" }
 size = 11
 
+
+[keyboard]
+bindings = [
+  { key = "F13", action = "ToggleFullscreen" },
+  { key = "Insert", mods = "Shift", action = "Paste" },
+  { key = "Insert", mods = "Control", action = "Copy" }
+]
+
+{{ end }}
+
+[env]
+TERM = "xterm-256color"
+
 [terminal.shell]
 {{ if eq .chezmoi.os "darwin" }}
+program = "/opt/homebrew/bin/tmux"
 # darwin
 {{ else if eq .chezmoi.os "linux" }}
 program = "/usr/bin/tmux" 
@@ -23,9 +46,3 @@ padding.y = 0
 decorations = "None"
 opacity = 0.98
 
-[keyboard]
-bindings = [
-  { key = "F13", action = "ToggleFullscreen" },
-  { key = "Insert", mods = "Shift", action = "Paste" },
-  { key = "Insert", mods = "Control", action = "Copy" }
-]
